@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>crud</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/crud.css">
+</head>
+
+<body>
+  <div class="crud">
+    <div class="head">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="text-center block">
+              Product Mangement System
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="title">
+              <input type="text" placeholder="Title" id="title">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <input onkeyup="getTotal()" type="number" id="price" placeholder="price">
+          </div>
+          <div class="col-md-2">
+            <input onkeyup="getTotal()" type="number" id="ads" placeholder="ads">
+          </div>
+          <div class="col-md-2">
+            <input onkeyup="getTotal()" type="number" id="taxes" placeholder="taxes">
+          </div>
+          <div class="col-md-3">
+            <input onkeyup="getTotal()" type="number" id="discount" placeholder="discount">
+          </div>
+          <div class="col-md-2 text-light total">
+            <small id="total"></small>
+          </div>
+          <div class="col-md-12">
+            <input type="number" id="Count" placeholder="Count">
+          </div>
+          <div class="col-md-12">
+            <input type="number" id="catogery" placeholder="catogery">
+          </div>
+          <button id="sumbit">Create</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="output">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="search">
+            <input onkeyup="SearchData(this.value)" type="text" placeholder="Search" id="search">
+            <div class="col-lg-6 ">
+              <button onclick="changeMood(this.id)" id="btn-title">Search with Title</button>
+            </div>
+            <div class="col-lg-6 ">
+              <button onclick="changeMood(this.id)" id="btn-catogery">Search with catogery</button>
+
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-12">
+        <table >
+          <tr>
+            <th>id</th>
+            <th>title</th>
+            <th>price</th>
+            <th>taxes</th>
+            <th>ads</th>
+            <th>discount</th>
+            <th>total</th>
+            <th>catogery</th>
+            <th>update</th>
+            <th>delete</th>
+          </tr>
+
+          <div id="deleteall">
+
+          </div>
+          
+          <tbody id="tbody">
+            <!-- <tr>
+            <td>1</td>
+            <td>iphone</td>
+            <td>111</td>
+            <td>111</td>
+            <td>111</td>
+            <td>111</td>
+            <td>1111</td>
+            <td>phone</td>
+            <td><button id="update"> update</button></td>
+            <td><button id="delete">delete</button></td>
+          
+          </tr> -->
+            <!-- <tr>
+            <td>1</td>
+            <td>iphone</td>
+            <td>111</td>
+            <td>111</td>
+            <td>111</td>
+            <td>111</td>
+            <td>1111</td>
+            <td>phone</td>
+            <td><button id="update"> update</button></td>
+            <td><button id="delete">delete</button></td>
+          
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>iphone</td>
+            <td>111</td>
+            <td>111</td>
+            <td>111</td>
+            <td>111</td>
+            <td>1111</td>
+            <td>phone</td>
+            <td><button id="update"> update</button></td>
+            <td><button id="delete">delete</button></td>
+          
+          </tr> -->
+            <!-- <tr>
+            <td>1</td>
+            <td>iphone</td>
+            <td>111</td>
+            <td>111</td>
+            <td>111</td>
+            <td>111</td>
+            <td>1111</td>
+            <td>phone</td>
+            <td><button id="update"> update</button></td>
+            <td><button id="delete">delete</button></td>
+          
+          </tr> -->
+          </tbody>
+        </table>
+      </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/all.min.js"></script>
+  <script src="./js/crud.js"></script>
+</body>
+
+</html>
